@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    height: 70vh;
+    background-image: url("assets/Images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    position: relative;
+}
+
+.main .box {
+    height: 70vh;
+    position: absolute;
+    width: 100%;
+    opacity: 0.7;
+    top: 0;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 20px 0;
+}
+
+nav img {
+    width: 10vw;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hero {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    display: flex;
+    position: relative;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    padding: 0 23px;
+}
+
+.hero> :first-child {
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.seperation {
+    background-color: red;
+    height: 3px;
+    /* margin-bottom: 10px; */
+    border: 1px solid;
+    border-radius: 50%;
+    background: linear-gradient(to right, transparent, red, transparent);
+    position: relative;
+}
+
+.seperation::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    /* Positions the shadow below the line */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* Glow height */
+    background: radial-gradient(circle, rgba(7, 87, 237, 0.5) 30%, transparent 80%);
+    filter: blur(10px);
+    /* Softens the shadow to create a glowing effect */
+    transform: translateY(5px);
+    /* Adjusts shadow position downward */
+    pointer-events: none;
+}
+
+.btn {
+    padding: 3px 8px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 6px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main input {
+    padding: 7px 100px 8px 14px;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(234, 230, 230, 0.5);
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.scrollable-div {
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    /* white-space: nowrap; Prevents items from wrapping to the next line */
+    padding: 20px;
+    margin: 10px 70px;
+    /* background-color: #333; */
+    border-radius: 8px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    /* Removes default list styling */
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    /* Makes the list items stay on one line */
+    gap: 15px;
+
+}
+
+li {
+    background: linear-gradient(180deg, rgb(7, 7, 110), rgb(74, 3, 3));
+    padding: 20px 40px;
+    border-radius: 8px;
+    color: white;
+    /* text-align: center; */
+    width: 15vw;
+    height: 25vh;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+
+.faqbox {
+    transition: all 1s ease-out;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    padding: 24px;
+    max-width: 70vw;
+    margin: 8px auto;
+    cursor: pointer;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    color: white;
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.hero-buttons input {
+    padding: 7px 100px 8px 14px;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(234, 230, 230, 0.5);
+    color: white;
+}
+
+.bottom {
+    display: flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+@media screen and (max-width: 1300px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item {
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
